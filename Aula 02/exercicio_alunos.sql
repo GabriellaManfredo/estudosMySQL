@@ -8,7 +8,7 @@ CREATE TABLE tb_alunos (
 	datanascimento DATE,
     responsavel VARCHAR(255) NOT NULL, 
     endereco VARCHAR(255) NOT NULL, 
-    media DECIMAL (2,1),
+    media DECIMAL (3,1),
     PRIMARY KEY(matricula)
 );
 
@@ -25,9 +25,7 @@ VALUES ("Alice", "2005-05-13", "Gisele", "Rua da Alegria, 50", 8.6),
 SELECT media, nome  FROM tb_alunos WHERE media > 7;
 SELECT media, nome  FROM tb_alunos WHERE media < 7;
 
-ALTER TABLE tb_alunos MODIFY media DECIMAL;
-
-UPDATE tb_alunos SET media = 5.0 WHERE matricula = 19;
-UPDATE tb_alunos SET media = 6.0 WHERE matricula = 22;
+UPDATE tb_alunos SET media = 5.0 WHERE matricula = 3;
+UPDATE tb_alunos SET media = 6.0 WHERE matricula = 8;
 
 SELECT * FROM tb_alunos;
